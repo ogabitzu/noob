@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width-device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn
+.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
+
+
+<title>Bootstrap Part 2</title>
+</head>
+<body>
+
+
+
+<div class="container">
+
+Name : <input type="text" id="textName" data-toggle="tooltip" title="Bootstrap tooltip" />
+<span class="glyphicon glyphicon-info-sign" id="infoIcon"></span>
+
+<br><br>
+
+<button class="btn btn-primary" data-placement="bottom" title="Button Tooltip" data-toggle="tooltip">Button</button><!-- data-placement="bottom" -->
+
+<div class="row">
+	<col-xs-12>
+		<button id="btnShowModal" class="btn btn-primary btn-sm pull-right">Login</button>
+		<div class="modal fade" id="loginModal" data-keyboard="false" data-backdrop="static" tabindex="-1">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Login</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="inputUserName">Username</label>
+								<input class="form-control" placeholder="Login Name" type="text" id="inputUserName">
+							</div>
+							<div class="form-group">
+								<label for="inputPassword">Password</label>
+								<input class="form-control" placeholder="Password" type="password" id="inputPassword">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary">Login</button>
+						<button class="btn btn-primary" id="btnHideModal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+	</col-xs-12>
+</div>
+
+<br>
+<br>
+<br>
+<!--
+<div class="row">
+	<col-xs-12>
+		<button class="btn btn-primary btn-sm pull-right" data-target="#loginModal" data-toggle="modal">Login</button>
+		<div class="modal fade" id="loginModal" data-keyboard="false" data-backdrop="static" tabindex="-1">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Login</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="inputUserName">Username</label>
+								<input class="form-control" placeholder="Login Name" type="text" id="inputUserName">
+							</div>
+							<div class="form-group">
+								<label for="inputPassword">Password</label>
+								<input class="form-control" placeholder="Password" type="password" id="inputPassword">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary">Login</button>
+						<button class="btn btn-primary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+	</col-xs-12>
+</div>
+-->
+<br>
+<br>
+<br>
+
+
+<div class="row">
+	<div class="col-xs-7">
+		<div class="panel-group" id="accordion">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a href="#panelBodyOne" data-toggle="collapse" data-parent="#accordion">
+										Photo
+									</a>
+								</h4>
+							</div>
+							<div id="panelBodyOne" class="panel-collapse collapse">
+								<div class="panel-body">
+								<img src="g/img1.jpg" class="img-responsive">
+								</div>
+								
+							</div>
+						</div>
+						<div class="panel panel-primary" >
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a href="#panelBodyTwo" data-toggle="collapse" data-parent="#accordion">
+										Asia
+
+									</a>
+								</h4>
+							</div>
+							<div id="panelBodyTwo" class="panel-collapse collapse">
+								<div class="panel-body">
+									<ul>
+										<li>India</li>
+										<li>China</li>
+										<li>Japan</li>
+									</ul>
+
+								</div>
+								
+							</div>
+						</div>
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a href="#panelBodyThree" data-toggle="collapse" data-parent="#accordion">
+										Asia
+
+									</a>
+								</h4>
+							</div>
+							<div id="panelBodyThree" class="panel-collapse collapse">
+								<div class="panel-body">
+									<ul>
+										<li>India</li>
+										<li>China</li>
+										<li>Japan</li>
+									</ul>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+<br>
+<br>
+<br>
+
+<div class="row">
+<div class="panel panel-default">
+<div class="panel-heading">
+
+<button class="btn btn-primary" id="toggleButton">
+Toggle Image Gallery
+</button>
+<button class="btn btn-primary" id="hideButton">
+Hide Image Gallery
+</button>
+<button class="btn btn-primary" id="showButton">
+Show Image Gallery
+</button>
+
+
+
+</div>
+<div class="panel-body collapse in" id="imageGallery">
+<div class="col-xs-4">
+
+	<a href="g/img1.jpg" alt="image1" class="thumbnail">
+	<p>Photo 1</p>
+	<img src="g/img1.jpg" />
+	</a>
+</div>
+<div class="col-xs-4">
+	<a href="g/img1.jpg" alt="image1" class="thumbnail">
+	<p>Photo 21</p>
+	<img src="g/img1.jpg" />
+	</a>
+</div>
+<div class="col-xs-4">
+	<a href="g/img1.jpg" alt="image1" class="thumbnail">
+	<p>Photo 31</p>
+	<img src="g/img1.jpg" />
+	</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="row">
+	<div class="col-xs-6">
+	<ul class="media-list">
+	
+	<li class="media">
+		<div class="media-left">
+			<a href="#">
+				<img src="g/sml1.jpg" alt="Image1" class="media-object" />
+			</a>
+		</div>
+		<div class="media-body">
+			<h4 class="media-heading">John<small><i>Oct 28, 1985</i></small></h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aliquam asperiores provident dolorum! Velit quam cumque,
+
+		<div class="media">
+		<div class="media-left">
+			<a href="#">
+				<img src="g/sm2.jpg" alt="Image1" class="media-object" />
+			</a>
+		</div>
+		<div class="media-body">
+			<h4 class="media-heading">John<small><i>Oct 28, 1985</i></small></h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aliquam asperiores provident dolorum! Velit quam cumque, in deserunt vel, reiciendis dolores! Iste ad, cumque quis officia at nisi neque enim!<div class="media">
+		<div class="media-left">
+			<a href="#">
+				<img src="g/sml1.jpg" alt="Image1" class="media-object" />
+			</a>
+		</div>
+		<div class="media-body">
+			<h4 class="media-heading">John<small><i>Oct 28, 1985</i></small></h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aliquam asperiores provident dolorum! Velit quam cumque, in deserunt vel, reiciendis dolores! Iste ad, cumque quis officia at nisi neque enim!</p>
+		</div>
+	</div></p>
+		</div>
+	</div></p>
+
+		</div>
+	</li>
+
+	</ul>
+	</div>
+
+</div>
+
+
+
+<div class="row">
+<div class="col-xs-7">
+	<div class="media">
+		<div class="media-left">
+			<a href="#">
+				<img src="g/sml1.jpg" alt="Image1" class="media-object" />
+			</a>
+		</div>
+		<div class="media-body">
+			<h4 class="media-heading">John<small><i>Oct 28, 1985</i></small></h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aliquam asperiores provident dolorum! Velit quam cumque, in deserunt vel, reiciendis dolores! Iste ad, cumque quis officia at nisi neque enim!</p>
+		</div>
+	</div>
+
+
+	<div class="media">
+		
+		<div class="media-body">
+			<h4 class="media-heading">Tom <small><i>July 20,2017</i></small></h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quo ea repudiandae molestias assumenda, eum magni velit, soluta dolorem vero quaerat !</p>
+		</div>
+		<div class="media-right">
+			<a href="#">
+				<img src="g/sm2.jpg" alt="Image2" class="media-object" />
+			</a>
+		</div>
+		<div>
+			
+		</div>
+	</div>
+
+</div>
+</div>
+<br><br>
+
+
+<div class="jumbotron">
+<h1>Bootstrap Tutorial</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis doloribus consectetur eum culpa illo. Quaerat nihil quo qui maxime neque, molestiae, amet itaque placeat earum rem alias culpa, mollitia perferendis.</p>
+<p><a class="btn btn-lg btn-primary" href="http://www.google.ro" target="_blank">Get Started</a></p>
+
+</div>
+
+<div class="progress">
+		<div class="progress-bar progress-bar-striped active" style="width:76%; min-width:20px">
+		76%
+		</div>
+</div>
+<div class="progress">
+		<div class="progress-bar progress-bar-success progress-bar-striped active" style="width:34%; min-width:20px">
+		34%
+		</div>
+</div>
+<div class="progress">
+		<div class="progress-bar progress-bar-warning active" style="width:66%; min-width:20px">
+		66%
+		</div>
+</div>
+
+
+
+<button class="btn btn-primary">Inbox <span class="badge">12</span></button>
+<button class="btn btn-success">Send <span class="badge">2</span></button>
+<button class="btn btn-warning">Trash <span class="badge">120</span></button>
+<button class="btn btn-danger">Folder <span class="badge">6</span></button>
+ 
+<br>
+<br>
+<br>
+<br>
+
+<div class="well">
+<h3>Dot Net Courses</h3>
+<hr>
+<h1>Default# <span class="label label-default"> Default</h1>
+<h2>C# <span class="label label-warning"> Warning</h2>
+<h3>ASP.NET <span class="label label-primary"> Primary</span></h3>
+<h4>ADO.NET <span class="label label-success"> Succes</span></h4>
+<h5>WCF <span class="label label-danger"> Danger</span></h5>
+<h6>Bootstrap <span class="label label-info"> Info</span></h6>
+
+</div>
+
+
+<div class="well">
+<h3>Login Form</h3>
+<hr />
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="inputUsername" class="control-label col-sm-2">Username</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" placeholder="Username" id="inputUsername" >
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputPassword" class="control-label col-sm-2">Password</label>
+		<div class="col-sm-10">
+		<input type="password" class="form-control" placeholder="Password" id="inputPassword">
+		</div>
+	</div>	
+		<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+	<button class="btn btn-default" type="submit">Login</button>	
+	</div></div>
+	</form>
+</div>
+
+
+<div class="row">
+	<div class="col-xs-12">
+		<div class="well well-sm">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quibusdam magni ad laboriosam reiciendis, alias natus, corporis id dolorum totam fugit ea perferendis ipsum, consectetur repellendus veritatis voluptatem cupiditate amet!
+</div>
+
+<div class="well">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quibusdam magni ad laboriosam reiciendis, alias natus, corporis id dolorum totam fugit ea perferendis ipsum, consectetur repellendus veritatis voluptatem cupiditate amet!
+</div>
+
+<div class="well well-lg">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quibusdam magni ad laboriosam reiciendis, alias natus, corporis id dolorum totam fugit ea perferendis ipsum, consectetur repellendus veritatis voluptatem cupiditate amet!
+</div>
+
+	</div>
+</div>
+
+
+
+<br />
+
+<div class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title">What is Bootstrap</h3></div>
+	<div class="panel-body">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit et illum iusto voluptatum dolores vero rerum sed, ipsum laudantium labore quaerat earum eius esse possimus velit nemo obcaecati facilis eaque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit et illum iusto voluptatum dolores vero rerum sed, ipsum laudantium labore quaerat earum eius esse possimus velit nemo obcaecati facilis eaque.
+	</div>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>0052454</td>
+				<td>Ion</td>
+				<td>jhgjhgj@yahoo.com</td>
+				<td>05455151</td>
+			</tr>
+				<tr>
+				<td>0052454</td>
+				<td>Ion</td>
+				<td>iiiiuuiu@yahoo.com</td>
+				<td>05455151</td>
+			</tr>
+				<tr>
+				<td>0052454</td>
+				<td>Ion</td>
+				<td>fdghhfg@yahoo.com</td>
+				<td>05455151</td>
+			</tr>
+				<tr>
+				<td>0052454</td>
+				<td>Ion</td>
+				<td>teyrrytr@yahoo.com</td>
+				<td>05455151</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="panel-footer">Is a CSS Preset</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+		$('#toggleButton').click(function() {
+			$('#imageGallery').collapse('toggle');
+		});
+		$('#hideButton').click(function() {
+				$('#imageGallery').collapse('hide');
+			});
+		$('#showButton').click(function() {
+				$('#imageGallery').collapse('show');
+			});
+	});
+</script>
+
+<script>
+	$(document).ready(function() {
+		$('#btnShowModal').click(function() {
+			$('#loginModal').modal('show');
+		});
+			$('#btnHideModal').click(function() {
+			$('#loginModal').modal('hide');
+		});
+
+	});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+
+	});
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
